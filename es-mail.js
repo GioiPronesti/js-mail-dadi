@@ -27,23 +27,15 @@ console.log(emails)
 const userMail = prompt('inserisci la tua email')
 console.log(userMail)
 
-
-
+let isEmailAuthorized = false;
 for( let i=0; i < emails.length; i++ ) 
-    
-{     
-    
-    elencoMail = emails[i]
+{    
+    const email = emails[i]
 
-    if (userMail === elencoMail) {
-
-        controllo = true
-    } else if (userMail !== elencoMail) {
-
-        controllo = false 
+    if (userMail === email) {
+        isEmailAuthorized = true
     }
-       
-
+    
 }
 
-console.log("L'accesso all' area riservata è:", controllo)
+console.log("L'accesso all' area riservata è:", isEmailAuthorized)
