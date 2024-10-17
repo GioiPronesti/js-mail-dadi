@@ -32,11 +32,10 @@ for( let i=0; i < emails.length; i++ ) {
     if (emails[i] === userMail) {
 
         controllo = true
-    } else {
-
-        controllo = false
+    } else if (emails[i] !== userMail) {
+        controllo = false 
     }
 
 }
 
-console.log(controllo)
+console.log("l'accesso all' area riservata è:", controllo)
